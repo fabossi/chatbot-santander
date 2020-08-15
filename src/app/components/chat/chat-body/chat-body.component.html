@@ -1,0 +1,10 @@
+<div *ngIf="userData?.length > 0" class='host' #bubbleScrolled @list>
+  <app-chat-bubble @items *ngFor="let u of userData; index as i" [chatInfo]="u" [ngClass]="u?.type" [index]="i">
+  </app-chat-bubble>
+
+</div>
+<div [@scrollBottom]="btnScrollToBottom" #btn (click)="scrollToBottom()" class="scroll-bottom">
+  <img src="../../../../assets/down.svg" alt="">
+</div>
+
+<app-list-recent-messages></app-list-recent-messages>

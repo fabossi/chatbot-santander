@@ -1,0 +1,140 @@
+.containerProfile {
+  display: flex;
+  margin : 3rem 2.5rem 0rem;
+
+  &__profileUser {
+    clip-path : circle(50% at 50% 50%);
+    border    : none;
+    align-self: flex-end;
+
+    &__img {
+      height   : 45px;
+      width    : 45px;
+      position : relative;
+      transform: scale(1.15);
+      top      : .2rem;
+    }
+  }
+
+  &__bubbleUser {
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : space-between;
+    max-height      : 200px;
+    max-width       : 400px;
+    background-color: var(--bg);
+    position        : relative;
+    left            : 0.8rem;
+    padding         : 1.5rem;
+    box-shadow      : var(--box-shadow-bblWatson);
+    margin          : 2rem 1.5rem;
+
+    &__name {
+      width      : 100%;
+      font-size  : 1.6rem;
+      font-weight: 800;
+      color      : var(--text-color-watsonBubbleName);
+    }
+
+    &__text {
+      width     : 100%;
+      text-align: left;
+      font-size : 1.5rem;
+      overflow-y: scroll;
+      word-wrap : break-word;
+      color     : var(--color-text);
+      padding   : 0 2rem 0 0rem;
+    }
+
+    &__time {
+      color      : var(--chatbubble-timeWatson);
+      font-size  : 1.1rem;
+      align-self : flex-end;
+      position   : relative;
+      right      : 50px;
+      font-weight: 600;
+    }
+  }
+
+
+  &__temp-message {
+    position : relative;
+    color    : inherit;
+    font-size: 1.1rem;
+    right    : 10rem;
+    height   : 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+}
+
+.containerProfile-2 {
+  display       : flex;
+  flex-direction: column;
+  margin        : 3rem 2.5rem 0rem;
+  max-width     : 400px;
+
+  &__bubbleUser {
+    background-color: #3694FF;
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : space-between;
+    box-shadow      : var(--box-shadow-bblUser);
+    padding         : 1.5rem;
+    max-height      : 150px;
+    max-width       : 400px;
+
+    &__name {
+      min-width  : 100%;
+      font-size  : 1.6rem;
+      font-weight: 800;
+      color      : white;
+    }
+
+    &__text {
+      font-family: "Source Sans Pro", sans-serif;
+      width      : 100%;
+      padding    : 0 2rem 0rem 0rem;
+      font-size  : 1.5rem;
+      color      : #e6e6e6;
+      word-wrap  : break-word;
+      overflow-y : scroll;
+      align-self : flex-start;
+    }
+  }
+
+  &__time {
+    color      : var(--chatbubble-timeUser);
+    font-size  : 1.1rem;
+    padding    : .2rem 0.4rem 0;
+    font-weight: 600;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f181;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #daf0ff;
+  }
+}

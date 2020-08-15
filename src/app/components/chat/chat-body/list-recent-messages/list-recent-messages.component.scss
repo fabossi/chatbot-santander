@@ -1,0 +1,83 @@
+.container {
+  height          : 250px;
+  width           : 350px;
+  position        : absolute;
+  bottom          : 3%;
+  right           : 1.5%;
+  background-color: var(--bg-modal-recent);
+  display         : flex;
+  flex-direction  : column;
+  justify-content : flex-start;
+  align-items     : center;
+  opacity         : .8;
+  border-radius   : 1.3rem;
+
+  &__header {
+    width           : 350px;
+    font-size       : 1.6rem;
+    color           : var(--text-color-watsonBubbleName);
+    text-align      : center;
+    background-color: var(--bg);
+    padding         : 1.3rem;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    border-radius   : 1.3rem;
+  }
+
+  &__container-list {
+    width          : 95%;
+    max-width      : 95%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: flex-start;
+    padding        : 1.5rem;
+    overflow-y     : auto;
+
+
+    &__items {
+      width        : 100%;
+      font-size    : 1.6rem;
+      color        : var(--color-text);
+      cursor       : pointer;
+      text-align   : center;
+      border-radius: .5rem;
+      white-space  : nowrap;
+      overflow     : hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.explication {
+  display        : flex;
+  text-align     : center;
+  justify-content: center;
+  align-items    : center;
+  height         : 100%;
+  font-size      : 1.4rem;
+  padding        : 1.5rem;
+  color          : var(--text-color-watsonBubbleName);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background   : #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

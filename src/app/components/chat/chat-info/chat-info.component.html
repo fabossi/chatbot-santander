@@ -1,0 +1,26 @@
+<div class="containerAboutProfile">
+  <div class="containerAboutProfile__profile">
+    <div class="circleStatus">
+      <div class="circleStatus__statusActive"></div>
+    </div>
+  </div>
+  <div class="containerAboutProfile__infoContainer">
+    <div class="containerAboutProfile__infoContainer__name">Watson Assistant</div>
+    <div class="containerAboutProfile__infoContainer__desc">
+      <div class="containerAboutProfile__infoContainer__desc__text">Bot</div>
+      <div class="containerAboutProfile__infoContainer__desc__dot"></div>
+      <img [ngClass]="{'invert': invert}" src="../../../../../assets/bot.png" alt="Assistant Bot"
+        class="containerAboutProfile__infoContainer__desc__icon">
+    </div>
+  </div>
+</div>
+
+<app-divisor></app-divisor>
+
+<app-contacts></app-contacts>
+
+<app-divisor></app-divisor>
+
+<ng-container>
+  <app-shared-files></app-shared-files>
+</ng-container>

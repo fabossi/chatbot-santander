@@ -1,0 +1,75 @@
+@import '../../../../../sass/base/animations.component';
+
+:host {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  width          : 100%;
+  height         : 10%;
+  position       : relative;
+  z-index        : 1;
+}
+
+form {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  height         : 100%;
+  width          : 100%;
+  box-shadow     : var(--box-shadow-input);
+
+  input {
+    height          : 100%;
+    width           : 100%;
+    background-color: transparent;
+    outline         : none;
+    caret-color     : var(--text-input);
+    color           : var(--text-input);
+    font-size       : 1.6rem;
+    z-index         : 1;
+    border          : none;
+    padding         : 2rem;
+    background-color: var(--bg-input);
+  }
+}
+
+.shake {
+  animation: shake 0.82s;
+}
+
+.bg-img {
+  backface-visibility: hidden;
+  display            : flex;
+  justify-content    : flex-start;
+  align-items        : center;
+  height             : 100%;
+  cursor             : pointer;
+  background-color   : var(--bg-input);
+  padding-right      : 1rem;
+
+}
+
+.plus {
+  z-index   : 2 !important;
+  height    : 32px;
+  transition: .4s;
+  transform : scale(.9);
+
+  &:hover {
+    transform: scale(.94);
+  }
+
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+::placeholder {
+  color     : #9c9c9c;
+  font-size : 1.6rem;
+  text-align: left;
+}
+
+.invert {
+  filter: invert(1);
+}

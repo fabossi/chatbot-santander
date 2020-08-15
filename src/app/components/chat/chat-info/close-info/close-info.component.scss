@@ -1,0 +1,30 @@
+.closeInfo {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  height          : 55px;
+  width           : 55px;
+  position        : absolute;
+  background-color: var(--bg-opacity);
+  box-shadow      : var(--box-shadow-closeInfo);
+  right           : 23%;
+  top             : 3%;
+  cursor          : pointer;
+
+  &__container {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+    right          : 1.1825rem;
+    z-index        : 2;
+
+    &__icon {
+      height   : 15px;
+      position : relative;
+      left     : 69.5%;
+      transform: scale(2.3) rotate(45deg);
+      top      : .1rem;
+    }
+  }
+}

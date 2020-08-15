@@ -1,0 +1,149 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear  : both;
+  }
+}
+
+@mixin CenteredObject {
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin blue-text-animation {
+  @keyframes blur-text {
+    0% {
+      filter: blur(0px);
+    }
+
+    100% {
+      filter: blur(3px);
+    }
+  }
+}
+
+@mixin for-loop-blur {
+  @for $i from 0 through 6 {
+    &:nth-child(#{$i + 1}) {
+      filter   : blur(0px);
+      animation: blur-text 1.4s (#{$i/6})+s infinite linear alternate;
+    }
+  }
+}
+
+// Medias Query`s Manager
+
+/*
+* $breakpoints choices:
+* - Phone
+* - tab-port
+* - tab-land
+* - big-desk
+- - - - - - - - - - - - - - - - -
+* 0 - 600px: Phone
+* 600px - 900px: Tablet
+* 900px - 1200px: Tablet LandScape
+* [1200 - 1800] is where our normal css will be apply
+* 1800px +: Big Desktops
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone-small {
+    @media only screen and (max-width: 32.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px == 37.5em because 600/16 = 37.5.  1em = 16px;
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint==big-desk {
+    @media only screen and (min-width: 112.5em) {
+      // 1800px
+      @content;
+    }
+  }
+}
+
+@mixin loader {
+  .lds-ring {
+    display : inline-block;
+    position: relative;
+    width   : 40px;
+    height  : 40px;
+  }
+
+  .lds-ring div {
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    display           : block;
+    position          : absolute;
+    width             : 35px;
+    height            : 35px;
+    margin            : 6px;
+    border            : 2px solid #fff;
+    border-radius     : 50%;
+    -webkit-animation : lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation         : lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color      : #fff transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+    -webkit-animation-delay: -0.45s;
+    animation-delay        : -0.45s;
+  }
+
+  .lds-ring div:nth-child(2) {
+    -webkit-animation-delay: -0.34s;
+    animation-delay        : -0.34s;
+  }
+
+  .lds-ring div:nth-child(3) {
+    -webkit-animation-delay: -0.20s;
+    animation-delay        : -0.20s;
+  }
+
+  @-webkit-keyframes lds-ring {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform        : rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform        : rotate(360deg);
+    }
+  }
+
+  @keyframes lds-ring {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform        : rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform        : rotate(360deg);
+    }
+  }
+}

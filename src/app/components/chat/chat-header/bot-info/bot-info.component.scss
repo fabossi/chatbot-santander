@@ -1,0 +1,45 @@
+:host {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+}
+
+
+.infoContainer {
+  color: var(--color-text);
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__desc {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: space-between;
+    width          : 80px;
+
+    &__text {
+      font-size: 14px;
+      color    : rgb(145, 145, 145);
+    }
+
+    &__dot {
+      height          : 4px;
+      width           : 4px;
+      border-radius   : 10rem;
+      background-color: rgba(133, 133, 133, 0.473);
+    }
+
+    &__icon {
+      position: relative;
+      height  : 35px;
+      right   : .84rem;
+      top     : -.2rem;
+    }
+  }
+}
+
+.invert {
+  filter: invert(1);
+}

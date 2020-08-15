@@ -1,0 +1,47 @@
+.host,
+:host {
+  display        : flex;
+  flex-direction : column;
+  justify-content: flex-start;
+  align-items    : center;
+  height         : 100%;
+  width          : 100%;
+  scroll-behavior: smooth;
+  overflow-x     : hidden !important;
+  position       : relative;
+}
+
+.watson {
+  align-self: flex-start;
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.host {
+  width         : 100%;
+  height        : 100%;
+  padding-bottom: 2rem;
+}
+
+.scroll-bottom {
+  position        : fixed;
+  width           : 50px;
+  height          : 50px;
+  clip-path       : circle(50% at 50% 50%);
+  background-color: var(--bg);
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  cursor          : pointer;
+  margin          : auto;
+  bottom          : 8rem;
+  transform       : scale(.9) !important;
+
+  &>img {
+    height: 20px;
+    width : 20px;
+    filter: invert(.5);
+  }
+}

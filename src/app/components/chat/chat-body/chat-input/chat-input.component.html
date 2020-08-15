@@ -1,0 +1,7 @@
+<form appEnterKey="onSubmitText()" (ngSubmit)="onSubmitText()" [formGroup]="inputForm">
+  <input [ngClass]="{'shake': shakeInput}" formControlName="inputText" ype="text" placeholder="Converse com o Watson"
+    autofocus>
+  <div (click)="showRecentMessages()" [ngClass]="{'shake': shakeInput}" class="bg-img">
+    <img [ngClass]="{'invert': invert}" class="plus" src="../../../../../assets/msg.svg" alt="recent messages">
+  </div>
+</form>

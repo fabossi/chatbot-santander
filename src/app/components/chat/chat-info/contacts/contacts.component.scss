@@ -1,0 +1,29 @@
+:host {
+  width: 80%;
+}
+
+.containerContact {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  color          : #89878B;
+  height         : 100%;
+  font-size      : 1.6rem;
+  width          : 100%;
+
+  &__email {
+    position: relative;
+    top     : -1rem;
+  }
+
+  &__containerMedia {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    &>img {
+      height: 23px;
+      cursor: pointer;
+    }
+  }
+}

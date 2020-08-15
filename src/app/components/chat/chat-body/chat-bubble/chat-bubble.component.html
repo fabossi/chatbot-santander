@@ -1,0 +1,28 @@
+<div [ngClass]="{'containerProfile': chatInfo?.type === 'watson',
+    'containerProfile-2': chatInfo?.type === 'user'}">
+
+  <div *ngIf="chatInfo?.type === 'watson'" class="containerProfile__profileUser">
+    <img *ngIf="chatInfo?.type === 'watson'" src="../../../../../assets/giphy.gif" alt=""
+      class="containerProfile__profileUser__img">
+  </div>
+
+  <div [ngClass]="{'containerProfile__bubbleUser': chatInfo?.type === 'watson',
+      'containerProfile-2__bubbleUser':chatInfo?.type==='user' }" [ngStyle]="{'border-radius': borderRadius}">
+
+    <div [ngClass]="{'containerProfile__bubbleUser__name': chatInfo?.type === 'watson',
+        'containerProfile-2__bubbleUser__name': chatInfo?.type === 'user'}">
+      {{chatInfo?.type}}
+    </div>
+
+    <p [ngClass]="{'containerProfile__bubbleUser__text': chatInfo?.type === 'watson',
+        'containerProfile-2__bubbleUser__text': chatInfo?.type === 'user'}">
+      {{chatInfo?.text}}</p>
+  </div>
+
+  <div *ngIf="chatInfo?.type === 'watson'" class="containerProfile__temp-message">
+    {{chatInfo?.tempMessage}}</div>
+
+  <div [ngClass]="{'containerProfile__bubbleUser__time': chatInfo?.type === 'watson',
+      'containerProfile-2__time': chatInfo?.type === 'user'}" class="containerProfile__time">
+    {{chatInfo?.time}}</div>
+</div>

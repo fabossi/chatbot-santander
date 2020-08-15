@@ -1,0 +1,21 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#303349" fill="none" id="svg_1" d="m29.026394,14.213057l-24.27,-12.13a2,2 0 0 0 -2.78,2.31l3.35,11.59l-3.35,11.59a2,2 0 0 0 1.89,2.53a1.92,1.92 0 0 0 0.89,-0.22l0,0l24.27,-12.13a2,2 0 0 0 0,-3.54z"/>
+  <line stroke="#303349" stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="15.667035" x2="29.901221" y1="2.071033" x1="3.097671" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+  <line stroke="#303349" transform="rotate(-52 16.249721527099606,23.04772567749023) " stroke-linecap="null" stroke-linejoin="null" id="svg_3" y2="29.523731" x2="29.875532" y1="16.571719" x1="2.623913" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+  <ellipse stroke="#303349" ry="0.915649" rx="0.221976" id="svg_4" cy="15.916759" cx="29.512764" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+  <line stroke="#303349" stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="29.207546" x2="2.487237" y1="15.72253" x1="6.371809" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="16.110987" x2="6.371809" y1="2.847947" x1="2.542731" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#303349" fill="none"/>
+  <path id="svg_13" d="m2.154273,4.1798" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#303349" fill="none"/>
+  <path id="svg_14" d="m1.876804,3.791343" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#303349" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="2.18202" x2="3.708102" y1="3.846837" x1="2.098779" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#303349" fill="none"/>
+  <line transform="rotate(-76 3.1254160404205296,28.819089889526364) " stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="27.98668" x2="3.930078" y1="29.651497" x1="2.320755" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#303349" fill="none"/>
+ </g>
+</svg>

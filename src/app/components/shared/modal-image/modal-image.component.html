@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="blur"></div>
+  <div @viewAllState (@viewAllState.done)="onAnimationEnds()" class="overlay">
+    <div *ngIf="images?.length > 0" class="overlay__imgGallery">
+      <ng-container *ngFor="let im of images | slice:0:9; index as i;">
+        <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
+          <img class="overlay__imgGallery__containerTitle__files" [src]="im?.src">
+          <p class="overlay__imgGallery__containerTitle__title"> {{ im?.title }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <div class="overlay__imgView">
+      <div class="overlay__imgView__menu">
+        <div class="overlay__imgView__menu__media">
+          Shared Media
+        </div>
+        <div class="overlay__imgView__menu__link">
+          Shared Links
+        </div>
+      </div>
+      <ng-container *ngIf="imageInView?.title !== ''">
+        <img @viewAllState [src]="imageInView?.src" class="overlay__imgView__viewer" />
+        <div @viewAllState class="overlay__imgView__containerInfoImg">
+          <div class="overlay__imgView__containerInfoImg__imgName">{{imageInView?.title}}</div>
+          <div class="overlay__imgView__containerInfoImg__imgHour">8:30 pm</div>
+          <div class="overlay__imgView__containerInfoImg__containerUser">
+            <div class="overlay__imgView__containerInfoImg__containerUser__userName">Watson</div>
+            <div class="overlay__imgView__containerInfoImg__containerUser__profile">
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <div *ngIf="imageInView?.title === ''" class="no-image">
+        <p>Selecione uma imagem ao lado, para detalhes.</p>
+      </div>
+
+    </div>
+    <div (click)="closeModal()" class="overlay__closeModal">
+      <img class="overlay__closeModal__icon" src="../../../../assets/close.svg" alt="">
+    </div>
+  </div>
+
+</div>

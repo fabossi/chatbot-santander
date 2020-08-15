@@ -1,0 +1,14 @@
+:host {
+  width          : 100%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+div {
+  top             : 3rem;
+  margin          : 3rem 0 3rem 0;
+  height          : .1rem;
+  width           : 80%;
+  background-color: var(--bg-divisor);
+}
