@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { recentMessages, animatedBubbleList, animatedBubbleItems } from '../chat-body-animations';
+import {
+  recentMessages,
+  animatedBubbleList,
+  animatedBubbleItems,
+} from '../chat-body-animations';
 import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-list-recent-messages',
   templateUrl: './list-recent-messages.component.html',
   styleUrls: ['./list-recent-messages.component.scss'],
-  animations: [recentMessages, animatedBubbleList, animatedBubbleItems]
+  animations: [recentMessages, animatedBubbleList, animatedBubbleItems],
 })
 export class ListRecentMessagesComponent implements OnInit {
-
   visible = 'none';
   invert = false;
-  recentMeessage = [];
-  getRecentImages: any;
+  recentMessage: any;
+  getRecentMsg: Array<[]> = [];
 
-  constructor(private chatService: ChatService) { }
+  constructor(private chatService: ChatService) {}
 
   ngOnInit() {
     this.chatService.viewRecentMessage.subscribe((status) => {
@@ -30,14 +33,12 @@ export class ListRecentMessagesComponent implements OnInit {
       if (status) {
         this.invert = !this.invert;
       }
-    })
-    this.recentMeessage = this.chatService.recentMessages;
+    });
+    this.recentMessage = this.chatService.recentMessages;
   }
-
 
   onClickRecentMessage(index) {
-    this.getRecentImages = this.recentMeessage[index];
-    this.chatService.recentMessagesEvent.next(this.getRecentImages);
+    this.getRecentMsg = this.recentMessage[index];
+    this.chatService.recentMessagesEvent.next(this.getRecentMsg);
   }
-
 }
