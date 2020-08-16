@@ -1,13 +1,14 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ChatService } from 'src/app/services/chat.service';
 import { User } from 'src/app/components/shared/User.model';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-chat-input',
   templateUrl: './chat-input.component.html',
   styleUrls: ['./chat-input.component.scss'],
 })
 export class ChatInputComponent implements OnInit {
+  @ViewChild('input') input: ElementRef;
   inputForm: FormGroup;
   viewErrorMessages: any;
   shakeInput = false;
@@ -27,7 +28,7 @@ export class ChatInputComponent implements OnInit {
     this.chatService.recentMessagesEvent.subscribe((recentMsg) => {
       if (recentMsg.length !== 0) {
         this.inputForm.reset();
-
+        this.input.nativeElement.focus();
         this.inputForm.get('inputText').setValue(recentMsg);
       }
     });
