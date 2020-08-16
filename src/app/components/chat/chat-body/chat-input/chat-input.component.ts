@@ -2,26 +2,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ChatService } from 'src/app/services/chat.service';
 import { User } from 'src/app/components/shared/User.model';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-chat-input',
   templateUrl: './chat-input.component.html',
   styleUrls: ['./chat-input.component.scss'],
 })
-export class ChatInputComponent implements OnInit, OnDestroy {
+export class ChatInputComponent implements OnInit {
   inputForm: FormGroup;
   viewErrorMessages: any;
   shakeInput = false;
   showRecentMsg = false;
   invert = false;
-  subscription: Subscription;
 
   constructor(private chatService: ChatService) {}
 
   ngOnInit() {
     this.createForm();
     this.chatService.sendResponseFromWatson('');
-    this.subscription = this.chatService.switchTheme.subscribe((status) => {
+    this.chatService.switchTheme.subscribe((status) => {
       if (status) {
         this.invert = !this.invert;
       }
@@ -33,10 +31,6 @@ export class ChatInputComponent implements OnInit, OnDestroy {
         this.inputForm.get('inputText').setValue(recentMsg);
       }
     });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
   onSubmitText() {
