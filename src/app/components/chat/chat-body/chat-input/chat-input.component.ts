@@ -15,7 +15,7 @@ export class ChatInputComponent implements OnInit {
   showRecentMsg = false;
   invert = false;
 
-  constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
     this.createForm();
@@ -67,7 +67,7 @@ export class ChatInputComponent implements OnInit {
     }
   }
 
-  submitWatsonResponse() {}
+  submitWatsonResponse() { }
 
   createForm() {
     this.inputForm = new FormGroup({

@@ -1,11 +1,11 @@
 <div class="containerSharedFiles">
-  <div class="containerSharedFiles__title">SHARED IMAGES</div>
+  <div class="containerSharedFiles__title">ARQUIVOS COMPARTILHADOS</div>
   <div *ngIf="images?.length > 0" class="containerSharedFiles__filesContainer" @list>
     <div @items *ngFor="let im of images | slice:0:6;">
       <img class="containerSharedFiles__filesContainer__files" [src]="im?.src" />
     </div>
     <div (click)="viewAllImages()" class="containerSharedFiles__filesContainer__files last">
-      <div class="last__text">View Shared Files</div>
+      <div class="last__text">Ver arquivos</div>
     </div>
   </div>
 </div>
