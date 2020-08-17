@@ -24,9 +24,9 @@ export const animatedBubbleItems = trigger('items', [
   transition(':leave', [
     style({ transform: 'scale(1)', opacity: 1, height: '*' }),
     animate(
-      '.8s cubic-bezier(.8, -0.6, 0.2, 1.5)',
+      '.2s',
       style({
-        transform: 'scale(0.5)',
+        transform: 'scale(0.7)',
         opacity: 0,
         height: '0px',
         margin: '0px',
