@@ -2,8 +2,11 @@
   <div class="main__appChat">
     <app-chat></app-chat>
   </div>
-  <div [@infoState]="closeInfo" class='main__appInfo'>
-    <app-chat-info [@infoState]='visibility'></app-chat-info>
+  <div #close>
+    <app-close-info></app-close-info>
+  </div>
+  <div [@infoState]="closeInfo" class="main__appInfo">
+    <app-chat-info [@infoState]="visibility"></app-chat-info>
   </div>
 </div>
 <div *ngIf="viewImages">

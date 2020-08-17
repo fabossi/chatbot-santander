@@ -24,7 +24,7 @@ export const resizeWidthTrigger = trigger('infoState', [
   })),
   state('circle', style({
     borderRadius: '1.3rem',
-    transform: 'translateX(27.3rem) rotate(315deg)',
+    transform: 'translateX(34rem) rotate(315deg)',
     'z-index': 2
   })),
   transition('square <=> circle', animate('.9s ease-out'))
