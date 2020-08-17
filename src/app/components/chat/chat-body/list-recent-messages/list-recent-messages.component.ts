@@ -15,7 +15,7 @@ import { ChatService } from 'src/app/services/chat.service';
 export class ListRecentMessagesComponent implements OnInit {
   visible = 'none';
   invert = false;
-  recentMessage: any;
+  recentMessage: Array<[]>;
   getRecentMsg: Array<[]> = [];
 
   constructor(private chatService: ChatService) {}
@@ -40,5 +40,9 @@ export class ListRecentMessagesComponent implements OnInit {
   onClickRecentMessage(index) {
     this.getRecentMsg = this.recentMessage[index];
     this.chatService.recentMessagesEvent.next(this.getRecentMsg);
+  }
+
+  removeItem(index) {
+    this.recentMessage.splice(index, 1);
   }
 }
