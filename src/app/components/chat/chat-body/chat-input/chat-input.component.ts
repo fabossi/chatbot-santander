@@ -89,7 +89,7 @@ export class ChatInputComponent implements OnInit {
     msg = this.inputForm.get('inputText').value;
     if (
       msg.split(' ').length >= 4 &&
-      this.chatService.recentMessages.indexOf(msg)
+      this.chatService.recentMessages.indexOf(msg) === -1
     ) {
       this.chatService.recentMessages.push(msg);
     }
