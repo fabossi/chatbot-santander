@@ -64,7 +64,7 @@ html[data-theme='dark'] {
   --box-shadow-bblUser         : 4px 1px 23px 0px #5c5c5ca1;
   --box-shadow-gallery         : 10px 10px 36px -6px #0c0c0c5e;
   --bg-modal-image             : #202020bb;
-  --border-modal-image          : #b3b3b35d;
+  --border-modal-image         : #b3b3b35d;
 
 }
 
@@ -95,7 +95,7 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition      : all 800ms !important;
+  transition      : all 900ms !important;
   transition-delay: 0 !important;
 }
 
@@ -113,13 +113,12 @@ html.transition *:after {
   width: 3px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+::-webkit-scrollbar-track {}
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 2rem;
-  background   : #888;
+  border-radius: 90px;
+  background   : $color-white;
+  padding      : .1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {

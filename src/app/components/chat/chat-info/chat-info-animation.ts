@@ -12,12 +12,12 @@ export const resizeWidthTrigger = trigger('infoState', [
   })),
   transition('default <=> clicked', animate('0.9s ease-out')),
   state('visible', style({
-    display: 'flex',
+    opacity: 1
   })),
   state('notVisible', style({
-    display: 'none',
+    opacity: 0
   })),
-  transition('visible <=> notVisible', animate('0s 0.1s ease-out')),
+  transition('visible <=> notVisible', animate('0.3s ease-out')),
   state('square', style({
     borderRadius: '1.3rem',
     transform: 'translateX(0) rotate(0)'

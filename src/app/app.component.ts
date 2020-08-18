@@ -20,8 +20,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.chatService.closeInfo.subscribe((status) => {
-      // status ? (this.closeInfo = 'clicked', this.visibility = 'notVisible')
-      //   : (this.closeInfo = 'default', this.visibility = 'visible');
       if (status) {
         this.closeInfo = 'clicked';
         this.visibility = 'notVisible';
