@@ -3,6 +3,8 @@ import {
   recentMessages,
   animatedBubbleList,
   animatedBubbleItems,
+  animatedRecentMessagesList,
+  animatedRecentMessagesItems,
 } from '../chat-body-animations';
 import { ChatService } from 'src/app/services/chat.service';
 
@@ -10,7 +12,7 @@ import { ChatService } from 'src/app/services/chat.service';
   selector: 'app-list-recent-messages',
   templateUrl: './list-recent-messages.component.html',
   styleUrls: ['./list-recent-messages.component.scss'],
-  animations: [recentMessages, animatedBubbleList, animatedBubbleItems],
+  animations: [recentMessages, animatedRecentMessagesList, animatedRecentMessagesItems],
 })
 export class ListRecentMessagesComponent implements OnInit {
   visible = 'none';
