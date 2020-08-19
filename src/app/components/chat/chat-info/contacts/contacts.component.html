@@ -2,10 +2,17 @@
 
   <div class="containerContact__containerMedia">
 
-    <img src="../../../../../assets/facebook.svg" alt="Facebook" class="containerContact__containerMedia">
-    <img src="../../../../../assets/linkedin.svg" alt="Linkedin" class="containerContact__containerMedia">
-    <img src="../../../../../assets/instagram.svg" alt="Instagram" class="containerContact__containerMedia">
-    <img src="../../../../../assets/twitter.svg" alt="Twitter" class="containerContact__containerMedia">
+    <app-lazy-image src="../../../../../assets/facebook.svg" [height]="height" [width]="width"
+      class="containerContact__containerMedia">
+    </app-lazy-image>
+    <app-lazy-image src="./../../../../assets/linkedin.svg" [height]="height" [width]="width"
+      class="containerContact__containerMedia">
+    </app-lazy-image>
+    <app-lazy-image src="../../../../../assets/instagram.svg" [height]="height" [width]="width"
+      class="containerContact__containerMedia"></app-lazy-image>
+    <app-lazy-image src="../../../../../assets/twitter.svg" [height]="height" [width]="width"
+      class="containerContact__containerMedia">
+    </app-lazy-image>
 
   </div>
 </div>

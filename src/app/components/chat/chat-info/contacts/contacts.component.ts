@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
+  height = '23';
+  width = '23';
+
   constructor() { }
 
   ngOnInit() {

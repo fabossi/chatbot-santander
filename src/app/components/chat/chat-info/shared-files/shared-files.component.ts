@@ -11,6 +11,8 @@ import { animatedBubbleItems, animatedBubbleList } from '../../chat-body/chat-bo
 export class SharedFilesComponent implements OnInit {
 
   images: Array<[]> = [];
+  height = '93';
+  width = '93';
   viewAll = false;
 
   constructor(private chatService: ChatService) { }

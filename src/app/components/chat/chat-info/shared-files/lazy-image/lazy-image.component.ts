@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LazyImageComponent implements OnInit {
 
   @Input() src: string;
+  @Input() height: string;
+  @Input() width: string;
+
   loaded = false;
   image = new Image();
 
