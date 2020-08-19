@@ -10,13 +10,16 @@ import { animatedBubbleItems, animatedBubbleList } from '../../chat-body/chat-bo
 })
 export class SharedFilesComponent implements OnInit {
 
-  images = [];
+  images: Array<[]> = [];
   viewAll = false;
 
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
-    this.images = this.chatService.images;
+    this.images = this.chatService.images.map((img) => {
+      return img.src;
+    });
+
   }
 
   viewAllImages() {

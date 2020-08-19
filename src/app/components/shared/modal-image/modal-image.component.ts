@@ -23,11 +23,14 @@ export class ModalImageComponent {
   }
 
   onAnimationEnds() {
-    this.images = this.chatService.images;
+    this.images = this.chatService.images.map((img) => {
+      return img.src;
+    });
+    this.images.slice(0, 10);
   }
 
   currentImgInfo(id) {
-    this.imageInView = this.images[id];
+    this.imageInView = this.chatService.images[id];
   }
 
 }

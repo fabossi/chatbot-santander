@@ -21,6 +21,7 @@ import { ChatBubbleComponent } from './components/chat/chat-body/chat-bubble/cha
 import { ModalImageComponent } from './components/shared/modal-image/modal-image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListRecentMessagesComponent } from './components/chat/chat-body/list-recent-messages/list-recent-messages.component';
+import { LazyImageComponent } from './components/chat/chat-info/shared-files/lazy-image/lazy-image.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ListRecentMessagesComponent } from './components/chat/chat-body/list-re
     SharedFilesComponent,
     EnterKeyDirective,
     ModalImageComponent,
-    ListRecentMessagesComponent
+    ListRecentMessagesComponent,
+    LazyImageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

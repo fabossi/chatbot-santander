@@ -1,0 +1,7 @@
+<ng-container *ngIf="loaded">
+    <img class="filesContainer__files" [src]="image?.src" alt="Images">
+</ng-container>
+
+<ng-container *ngIf="!loaded">
+    <span class="skeleton-box" style="width:100px;height:80px;"></span>
+</ng-container>

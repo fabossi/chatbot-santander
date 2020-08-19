@@ -18,7 +18,7 @@ export class ListRecentMessagesComponent implements OnInit {
   recentMessage: Array<[]>;
   getRecentMsg: Array<[]> = [];
 
-  constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
     this.chatService.viewRecentMessage.subscribe((status) => {

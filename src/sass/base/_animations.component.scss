@@ -14,6 +14,12 @@
   }
 }
 
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @keyframes topToBottom {
   0% {
     opacity  : 0;

@@ -20,7 +20,7 @@ export class ChatService {
 
   private URL = '';
 
-  images = [
+  images: any = [
     {
       src: '../../../../../assets/image1.min.jpg',
       title: 'image 1',

@@ -2,10 +2,10 @@
   <div class="blur"></div>
   <div @viewAllState (@viewAllState.done)="onAnimationEnds()" class="overlay">
     <div *ngIf="images?.length > 0" class="overlay__imgGallery">
-      <ng-container *ngFor="let im of images | slice:0:9; index as i;">
+      <ng-container *ngFor="let imgPath of images | slice:0:12; index as i;">
         <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
-          <img class="overlay__imgGallery__containerTitle__files" [src]="im?.src">
-          <p class="overlay__imgGallery__containerTitle__title"> {{ im?.title }}</p>
+          <app-lazy-image [src]="imgPath"></app-lazy-image>
+          <p class="overlay__imgGallery__containerTitle__title"> {{ imgPath?.title }}</p>
         </div>
       </ng-container>
     </div>
