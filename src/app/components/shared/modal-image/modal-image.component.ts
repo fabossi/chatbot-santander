@@ -24,7 +24,6 @@ export class ModalImageComponent {
 
   onAnimationEnds() {
     this.images = this.chatService.images;
-    this.images.slice(0, 10);
   }
 
   currentImgInfo(id) {
