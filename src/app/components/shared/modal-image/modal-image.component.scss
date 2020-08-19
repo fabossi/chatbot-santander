@@ -74,6 +74,32 @@
       }
     }
 
+    &__loadMore {
+      position        : absolute;
+      display         : flex;
+      justify-content : center;
+      align-items     : center;
+      width           : 32%;
+      height          : 6%;
+      bottom          : 0rem;
+      margin          : auto;
+      background-color: var(--bg);
+      opacity         : .6;
+      padding         : .5rem 1rem;
+      cursor          : pointer;
+
+      &__plus {
+        position        : relative;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        border-radius   : 1rem;
+        background-color: var(--bg);
+        top             : -1.5rem;
+        box-shadow      : var(--box-shadow--loadMore);
+        padding         : 1rem;
+      }
+    }
   }
 
   &__imgView {
@@ -209,6 +235,10 @@
   align-items    : center;
   font-size      : 1.6rem;
   color          : var(--text-color-watsonBubbleName);
+}
+
+.invert {
+  filter: invert(1);
 }
 
 ::-webkit-scrollbar {

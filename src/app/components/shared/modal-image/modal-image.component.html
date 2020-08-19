@@ -2,12 +2,16 @@
   <div class="blur"></div>
   <div @viewAllState (@viewAllState.done)="onAnimationEnds()" class="overlay">
     <div *ngIf="images?.length > 0" class="overlay__imgGallery">
-      <ng-container *ngFor="let img of images | slice:0:10; index as i;">
+      <ng-container *ngFor="let img of images | slice:0:12; index as i;">
         <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
           <app-lazy-image style="margin: 1rem;" [src]="img?.src"></app-lazy-image>
           <p class="overlay__imgGallery__containerTitle__title"> {{ img?.title }}</p>
         </div>
       </ng-container>
+      <div class='overlay__imgGallery__loadMore' (click)="loadMore()" [ngClass]="{'invert': !invert}">
+        <app-lazy-image class='overlay__imgGallery__loadMore__plus' [src]="srcImage" [height]="height" [width]="width">
+        </app-lazy-image>
+      </div>
     </div>
     <div class="overlay__imgView">
       <div class="overlay__imgView__menu">

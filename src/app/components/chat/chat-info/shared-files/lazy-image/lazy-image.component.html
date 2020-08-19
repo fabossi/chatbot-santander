@@ -1,4 +1,3 @@
 <img *ngIf="loaded" class="filesContainer__files" [src]="image?.src" [style.height]="height + 'px'" alt="Images">
 
-<span *ngIf="!loaded" class="skeleton-box" style="width:100px;height:80px;" [style.height]="height + 'px'"
-    [style.width]="width + 'px'"></span>
+<span *ngIf="!loaded" class="skeleton-box" [style.height]="height + 'px'" [style.width]="width + 'px'"></span>
