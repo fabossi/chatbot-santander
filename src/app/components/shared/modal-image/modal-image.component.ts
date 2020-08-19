@@ -23,9 +23,7 @@ export class ModalImageComponent {
   }
 
   onAnimationEnds() {
-    this.images = this.chatService.images.map((img) => {
-      return img.src;
-    });
+    this.images = this.chatService.images;
     this.images.slice(0, 10);
   }
 
