@@ -4,7 +4,7 @@
     <div *ngIf="images?.length > 0" class="overlay__imgGallery">
       <ng-container *ngFor="let imgPath of images | slice:0:12; index as i;">
         <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
-          <app-lazy-image [src]="imgPath"></app-lazy-image>
+          <app-lazy-image style="margin: 1rem;" [src]="imgPath"></app-lazy-image>
           <p class="overlay__imgGallery__containerTitle__title"> {{ imgPath?.title }}</p>
         </div>
       </ng-container>

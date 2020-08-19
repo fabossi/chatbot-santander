@@ -2,7 +2,8 @@
   <div class="containerSharedFiles__title">ARQUIVOS COMPARTILHADOS</div>
   <div *ngIf="images?.length > 0" class="containerSharedFiles__filesContainer" @list>
 
-    <app-lazy-image @items *ngFor="let imgPath of images | slice:0:6;" [src]="imgPath" [height]="height" [width]="width">
+    <app-lazy-image style="margin: .2rem;" @items *ngFor="let imgPath of images | slice:0:6;" [src]="imgPath"
+      [height]="height" [width]="width">
     </app-lazy-image>
 
     <div (click)="viewAllImages()" class="containerSharedFiles__filesContainer__files last">
