@@ -10,6 +10,14 @@
   background-color: var(--bg);
 }
 
+.containerIcons {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-evenly;
+  position       : relative;
+  right          : 3rem;
+}
+
 .containerInfos {
   display        : flex;
   justify-content: space-between;
@@ -41,17 +49,47 @@ input[type=checkbox] {
 }
 
 label {
-  cursor       : pointer;
-  text-indent  : -9999px;
-  width        : 52px;
-  height       : 27px;
-  background   : var(--color-headings);
-  float        : right;
-  border-radius: 100px;
-  position     : relative;
+  cursor             : pointer;
+  text-indent        : -9999px;
+  width              : 52px;
+  height             : 27px;
+  background         : var(--color-headings);
+  float              : right;
+  border-radius      : 100px;
+  position           : relative;
+  backface-visibility: hidden;
+
 }
 
-label:after {
+#cla {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-evenly;
+  justify-content: center;
+}
+
+#cla::after,
+#cla::before {
+  font-weight   : 700;
+  letter-spacing: .1rem;
+  position      : relative;
+  transform     : scale(1.15);
+}
+
+#cla::after {
+  content   : "Dark";
+  align-self: flex-end;
+  top       : .3rem;
+  color     : var(--content-dark);
+}
+
+#cla::before {
+  content: "Light";
+  bottom : .3rem;
+  color  : var(--content-light)
+}
+
+label::after {
   content      : '';
   position     : absolute;
   top          : 3px;

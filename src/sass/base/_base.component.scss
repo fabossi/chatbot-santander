@@ -65,7 +65,8 @@ html[data-theme='dark'] {
   --box-shadow-gallery         : 10px 10px 36px -6px #0c0c0c5e;
   --bg-modal-image             : #202020bb;
   --border-modal-image         : #b3b3b35d;
-
+  --content-light              : rgba(85, 85, 85, 0);
+  --content-dark               : rgba(104, 104, 104, 0.664);
 }
 
 :root {
@@ -89,6 +90,8 @@ html[data-theme='dark'] {
   --bg-modal-image             : #f5f5f599;
   --border-modal-image         : #b3b3b396;
   --bg-modal-recent            : #7c7c7c44;
+  --content-light              : rgba(70, 70, 70, 0.664);
+  --content-dark               : rgba(32, 32, 32, 0);
 }
 
 html.transition,

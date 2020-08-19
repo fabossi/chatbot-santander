@@ -1,5 +1,4 @@
 <div class="containerInfos">
-  <!-- <app-close-info></app-close-info> -->
   <app-profile></app-profile>
   <div class="circleStatus">
     <div class="circleStatus__statusActive"></div>
@@ -7,6 +6,8 @@
   <app-bot-info></app-bot-info>
 
 </div>
-<div (click)="switchTheme()" style="position: relative;right: 3rem; top: .3rem" class="toggle-container">
-  <input type="checkbox" id="switch" name="theme" /><label for="switch"></label>
+<div class="containerIcons">
+  <div (click)="switchTheme()" id="cla">
+    <input type="checkbox" id="switch" name="theme" /><label for="switch"></label>
+  </div>
 </div>

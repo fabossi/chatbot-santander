@@ -19,6 +19,7 @@ export class ChatHeaderComponent implements OnInit {
 
     const checkbox = document.querySelector('input[name=theme]');
 
+    // tslint:disable-next-line: space-before-function-paren
     checkbox.addEventListener('change', function () {
       if (this.checked) {
         trans();
