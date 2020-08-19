@@ -36,7 +36,7 @@ export const animatedRecentMessagesItems = trigger('rmItems', [
   transition(':enter', [
     style({ transform: 'translateX(-2rem)', opacity: 0 }),
     animate(
-      '.8s cubic-bezier(.8, -0.6, 0.2, 1.5)',
+      '.5s cubic-bezier(.8, -0.6, 0.2, 1.5)',
       style({ transform: 'translateX(1)', opacity: 1 })
     ),
   ]),

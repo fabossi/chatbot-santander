@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
   recentMessages,
-  animatedBubbleList,
-  animatedBubbleItems,
   animatedRecentMessagesList,
   animatedRecentMessagesItems,
 } from '../chat-body-animations';
@@ -24,15 +22,15 @@ export class ListRecentMessagesComponent implements OnInit {
 
   ngOnInit() {
     this.chatService.viewRecentMessage.subscribe((status) => {
-      if (status) {
+      if (status === true) {
         this.visible = 'visible';
       }
-      if (!status) {
+      if (status === false) {
         this.visible = 'none';
       }
     });
     this.chatService.switchTheme.subscribe((status) => {
-      if (status) {
+      if (status === true) {
         this.invert = !this.invert;
       }
     });

@@ -21,7 +21,7 @@ export class ChatInputComponent implements OnInit {
     this.createForm();
     this.chatService.sendResponseFromWatson('');
     this.chatService.switchTheme.subscribe((status) => {
-      if (status) {
+      if (status === true) {
         this.invert = !this.invert;
       }
     });

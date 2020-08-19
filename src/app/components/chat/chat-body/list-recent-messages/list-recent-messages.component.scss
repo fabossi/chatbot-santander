@@ -38,7 +38,7 @@
 
 
     &__items {
-      width        : 100%;
+      max-width    : 95%;
       font-size    : 1.6rem;
       color        : var(--color-text);
       cursor       : pointer;
@@ -47,14 +47,14 @@
       overflow     : hidden;
       white-space  : nowrap;
       text-overflow: ellipsis;
-      margin       : 1rem;
     }
 
     &__exclude {
       display        : flex;
       align-items    : center;
       justify-content: center;
-      width          : 100%;
+      width          : 10%;
+      margin         : 1rem;
 
       &__icon {
         filter: invert(0.7) sepia(0.9) saturate(90.5) opacity(0.6);

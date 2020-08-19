@@ -13,7 +13,7 @@ export class BotInfoComponent implements OnInit {
 
   ngOnInit() {
     this.chatService.switchTheme.subscribe((status) => {
-      if (status) {
+      if (status === true) {
         this.invert = !this.invert;
       }
     });
