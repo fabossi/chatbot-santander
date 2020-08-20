@@ -1,3 +1,21 @@
-<img *ngIf="loaded" class="filesContainer__files" [src]="image?.src" [style.height]="height + 'px'" alt="Images">
+<ng-container *ngIf="loaded">
+    <img [src]="image?.src" [ngStyle]="{
+        'margin': margin + 'rem', 
+        'height': height + 'px', 
+        'width': width + 'px', 
+        'border-radius': borderRadius + 'rem', 
+        'clip-path':clipPath,
+        'filter': 'invert(' + filter + ')'
+    }" alt="Images">
+</ng-container>
 
-<span *ngIf="!loaded" class="skeleton-box" [style.height]="height + 'px'" [style.width]="width + 'px'"></span>
+<ng-container *ngIf="!loaded">
+    <span class="skeleton-box" [ngStyle]="
+    {
+        'margin': margin + 'rem', 
+        'height': height + 'px', 
+        'width': width + 'px', 
+        'border-radius': borderRadius + 'rem', 
+        'clip-path':clipPath
+    }"></span>
+</ng-container>

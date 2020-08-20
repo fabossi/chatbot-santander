@@ -13,6 +13,10 @@ export class SharedFilesComponent implements OnInit {
   images: Array<[]> = [];
   height = '93';
   width = '93';
+  margin = '0.6';
+  borderRadius = '0.7';
+  clipPath = 'polygon(0% 0%, 100% 0%, 100% 99%, 0% 100%)';
+  classImg = 'containerSharedFiles__filesContainer__files';
   viewAll = false;
 
   constructor(private chatService: ChatService) { }
@@ -21,6 +25,9 @@ export class SharedFilesComponent implements OnInit {
     this.images = this.chatService.images.map((img) => {
       return img.src;
     });
+
+    this.images = this.images.slice(0, 6);
+
 
   }
 

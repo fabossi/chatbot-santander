@@ -1,14 +1,14 @@
 .container {
-  height          : 250px;
-  width           : 350px;
   position        : absolute;
-  bottom          : 2%;
-  right           : 1.5%;
-  background-color: var(--bg-modal-recent);
   display         : flex;
   flex-direction  : column;
   justify-content : flex-start;
   align-items     : center;
+  height          : 250px;
+  width           : 350px;
+  bottom          : 2%;
+  right           : 1.5%;
+  background-color: var(--bg-modal-recent);
   opacity         : .8;
   border-radius   : 1.3rem;
   overflow        : hidden;
@@ -33,12 +33,11 @@
     flex-direction : column;
     justify-content: flex-start;
     align-items    : center;
-    padding-right  : 1.5rem;
     overflow-y     : auto;
 
 
     &__items {
-      max-width    : 95%;
+      width        : 70%;
       font-size    : 1.6rem;
       color        : var(--color-text);
       cursor       : pointer;
@@ -53,7 +52,7 @@
       display        : flex;
       align-items    : center;
       justify-content: center;
-      width          : 10%;
+      width          : 100%;
       margin         : 1rem;
 
       &__icon {

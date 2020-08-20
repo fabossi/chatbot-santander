@@ -13,16 +13,24 @@ export class ModalImageComponent implements OnInit {
 
   images = [];
   imageInView = { src: '', title: '' };
-  invert = false;
-  srcImage = '../../../../assets/plus-b.svg';
-  height = '25';
-  width = '10';
+  invert = 0;
+  srcImage = '../../../../assets/chevron-down.svg';
+  height = '93';
+  width = '93';
+  classImgGallery = 'overlay__imgGallery__loadMore__plus';
+  borderRadius = '0.7';
+  margin = '0.6';
+  heightPlus = '25';
+  widthPlus = '25';
+  widthArray = 0;
+
+
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
-    this.chatService.closeInfo.subscribe((status) => {
+    this.chatService.switchTheme.subscribe((status) => {
       if (status) {
-        this.invert = true;
+        this.invert = 1;
       }
     });
   }
@@ -33,12 +41,15 @@ export class ModalImageComponent implements OnInit {
 
   onAnimationEnds() {
     this.images = this.chatService.images;
+    this.widthArray = this.images.length - 9;
   }
 
   currentImgInfo(id) {
     this.imageInView = this.chatService.images[id];
   }
 
-  loadMore() { }
+  loadMore() {
+    this.widthArray = this.widthArray + 4;
+  }
 
 }

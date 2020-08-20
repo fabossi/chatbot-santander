@@ -67,12 +67,16 @@ html[data-theme='dark'] {
   --border-modal-image         : #b3b3b35d;
   --content-light              : rgba(85, 85, 85, 0);
   --content-dark               : rgba(104, 104, 104, 0.664);
-  --box-shadow--loadMore       : 0px 5px 21px #0c0c0c7a;
+  --box-shadow--loadMore       : 0px 5px 21px #2020207a;
+  --bg-loadMore                : #00000075;
+  --bg-button-loadMore         : #e2e2e2e8;
 }
 
 :root {
   --bg                         : #F6F7FB;
   --bg-opacity                 : #f6f7fb94;
+  --bg-loadMore                : #F6F7FB;
+  --bg-button-loadMore         : #161616;
   --color-text                 : #1a1c29;
   --chatbubble-text            : #9e9e9e;
   --chatbubble-timeWatson      : #9e9e9e;

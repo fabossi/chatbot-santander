@@ -1,41 +1,4 @@
-.filesContainer {
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    align-items    : center;
-    flex-wrap      : wrap;
-    width          : 100%;
-    margin         : 2rem 0;
-
-    &__files {
-        clip-path    : polygon(0% 0%, 100% 0%, 100% 99%, 0% 100%);
-        height       : 93px;
-        width        : 93px;
-        border-radius: .7rem;
-        cursor       : pointer;
-        transition   : opacity .7s, transform .4s;
-
-        &:not(:last-child) {
-            filter: blur(1.8px);
-        }
-
-        &:hover {
-            opacity  : .8;
-            transform: scale(.95);
-            filter   : blur(0);
-        }
-
-        &:active {
-            transform: scale(.9);
-        }
-    }
-
-}
-
 .skeleton-box {
-    clip-path       : polygon(0% 0%, 100% 0%, 100% 99%, 0% 100%);
-    margin          : .1rem;
-    border-radius   : .7rem;
     display         : inline-block;
     position        : relative;
     overflow        : hidden;
