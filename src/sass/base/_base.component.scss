@@ -70,13 +70,14 @@ html[data-theme='dark'] {
   --box-shadow--loadMore       : 0px 5px 21px #2020207a;
   --bg-loadMore                : #00000075;
   --bg-button-loadMore         : #e2e2e2e8;
+  --bg-button-view-all-images  : #DEE4F1;
 }
 
 :root {
   --bg                         : #F6F7FB;
   --bg-opacity                 : #f6f7fb94;
   --bg-loadMore                : #F6F7FB;
-  --bg-button-loadMore         : #161616;
+  --bg-button-loadMore         : #ffffff;
   --color-text                 : #1a1c29;
   --chatbubble-text            : #9e9e9e;
   --chatbubble-timeWatson      : #9e9e9e;
@@ -98,6 +99,8 @@ html[data-theme='dark'] {
   --bg-modal-recent            : #7c7c7c44;
   --content-light              : rgba(70, 70, 70, 0.664);
   --content-dark               : rgba(32, 32, 32, 0);
+  --bg-button-view-all-images  : #b9b9b9a4;
+
 
 }
 
