@@ -29,7 +29,7 @@ export const animatedBubbleItems = trigger('items', [
 ]);
 
 export const animatedRecentMessagesList = trigger('rmList', [
-  transition(':enter', [query('@items', stagger(300, animateChild()))]),
+  transition(':enter', [query('@rmItems', stagger(300, animateChild()))]),
 ]);
 
 export const animatedRecentMessagesItems = trigger('rmItems', [

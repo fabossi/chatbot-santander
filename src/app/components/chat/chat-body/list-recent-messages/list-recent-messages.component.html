@@ -1,9 +1,9 @@
-<div [@recentMessages]="visible" class="container">
-  <div [@recentMessages]="visible" class="container__header">
+<div [@recentMessages]="visibility" class="container">
+  <div [@recentMessages]="visibility" class="container__header">
     Mensagens Recentes
     <img [ngClass]="{ invert: invert }" src=" ../../../../../assets/msg.svg" height="20px" />
   </div>
-  <div @rmList *ngIf="recentMessage?.length !== 0" class="container__container-list">
+  <div *ngIf="recentMessage?.length > 0" @rmList class="container__container-list">
     <div class="container__container-list__exclude" @rmItems *ngFor="let rm of recentMessage; index as i">
       <div (click)="onClickRecentMessage(i)" class="container__container-list__items">
         {{ rm }}
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div class="explication" *ngIf="recentMessage?.length === 0 && visible === 'visible'">
+  <div class="explication" *ngIf="recentMessage?.length === 0 && visibility === 'visible'">
     Aqui aparecerão as suas frases mais relevantes. Você poderá reutiliza-las na
     conversa com o Watson, basta selecionar uma e pressionar enter para enviar.
   </div>

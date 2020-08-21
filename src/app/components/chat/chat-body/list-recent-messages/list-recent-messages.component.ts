@@ -13,7 +13,7 @@ import { ChatService } from 'src/app/services/chat.service';
   animations: [recentMessages, animatedRecentMessagesList, animatedRecentMessagesItems],
 })
 export class ListRecentMessagesComponent implements OnInit {
-  visible = 'none';
+  visibility = 'none';
   invert = false;
   recentMessage: Array<[]>;
   getRecentMsg: Array<[]> = [];
@@ -23,10 +23,10 @@ export class ListRecentMessagesComponent implements OnInit {
   ngOnInit() {
     this.chatService.viewRecentMessage.subscribe((status) => {
       if (status === true) {
-        this.visible = 'visible';
+        this.visibility = 'visible';
       }
       if (status === false) {
-        this.visible = 'none';
+        this.visibility = 'none';
       }
     });
     this.chatService.switchTheme.subscribe((status) => {

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from 'src/app/components/shared/User.model';
-import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-chat-bubble',
@@ -12,7 +11,7 @@ export class ChatBubbleComponent implements OnInit {
   @Input() public index: number;
   borderRadius = '';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.applyStyle();
