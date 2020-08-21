@@ -34,15 +34,16 @@ export const animatedRecentMessagesList = trigger('rmList', [
 
 export const animatedRecentMessagesItems = trigger('rmItems', [
   transition(':enter', [
-    style({ transform: 'translateX(-2rem)', opacity: 0 }),
+    style({ transform: 'translateX(-3rem)', opacity: 0 }),
     animate(
       '.5s cubic-bezier(.8, -0.6, 0.2, 1.5)',
-      style({ transform: 'translateX(1)', opacity: 1 })
+      style({ transform: 'translateX(0)', opacity: 1 })
     ),
   ]),
   transition(':leave', [
-    style({ transform: 'translateX(1)', opacity: 1 }),
-    animate('.2s', style({ transform: 'translateX(-3rem)', opacity: 0 })
+    style({ transform: 'translateX(0)', opacity: 1 }),
+    animate('.5s cubic-bezier(.8, -0.6, 0.2, 1.5)',
+      style({ transform: 'translateX(-3rem)', opacity: 0 })
     ),
   ]),
 ]);
