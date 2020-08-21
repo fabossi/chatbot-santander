@@ -70,17 +70,16 @@
     }
 
     &__loadMore {
-      position        : absolute;
-      display         : flex;
-      justify-content : center;
-      align-items     : center;
-      width           : 32%;
-      height          : 6%;
-      bottom          : 0rem;
-      margin          : auto;
-      background-color: var(--bg-loadMore);
-      opacity         : .8;
-      padding         : .5rem 1rem;
+      position       : absolute;
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      width          : 32%;
+      height         : 6%;
+      bottom         : 0rem;
+      margin         : auto;
+      opacity        : .8;
+      padding        : .5rem 1rem;
 
       &__plus {
         cursor          : pointer;
@@ -88,11 +87,24 @@
         display         : flex;
         justify-content : center;
         align-items     : center;
-        background-color: var(--bg-button-loadMore);
+        background-color: var(--bg-loadMore);
         top             : -1.5rem;
         box-shadow      : var(--box-shadow--loadMore);
         padding         : 1rem;
         border-radius   : .7rem;
+        font-size       : 1.4rem;
+        font-weight     : 600;
+        letter-spacing  : .2rem;
+        color           : var(--text-color-watsonBubbleName);
+        transition      : transform .3s;
+
+        &:hover {
+          transform: scale(1.01);
+        }
+
+        &:active {
+          transform: scale(.93);
+        }
       }
     }
   }
