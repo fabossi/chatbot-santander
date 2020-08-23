@@ -256,10 +256,6 @@
   color          : var(--text-color-watsonBubbleName);
 }
 
-.invert {
-  filter: invert(1);
-}
-
 ::-webkit-scrollbar {
   width: 2px;
 }
@@ -274,4 +270,13 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(136, 136, 136, 0);
+}
+
+
+input {
+  border       : none;
+  border-radius: 1rem;
+  width        : 40%;
+  padding      : 1rem;
+  outline      : none;
 }

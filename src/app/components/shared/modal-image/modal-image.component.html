@@ -2,7 +2,9 @@
   <div class="blur"></div>
   <div @viewAllState (@viewAllState.done)="onAnimationEnds()" class="overlay">
     <div *ngIf="images?.length > 0" class="overlay__imgGallery">
-      <div class="overlay__imgGallery__title"></div>
+      <div class="overlay__imgGallery__title">
+        <input type="text" name="" id="">
+      </div>
       <ng-container *ngFor="let img of images | slice:0:widthArray; index as i;">
         <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
           <app-lazy-image class="overlay__imgGallery__containerTitle__files" [src]="img?.src" [height]="height"

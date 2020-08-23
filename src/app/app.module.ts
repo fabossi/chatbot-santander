@@ -22,6 +22,7 @@ import { ModalImageComponent } from './components/shared/modal-image/modal-image
 import { HttpClientModule } from '@angular/common/http';
 import { ListRecentMessagesComponent } from './components/chat/chat-body/list-recent-messages/list-recent-messages.component';
 import { LazyImageComponent } from './components/chat/chat-info/shared-files/lazy-image/lazy-image.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { LazyImageComponent } from './components/chat/chat-info/shared-files/laz
     EnterKeyDirective,
     ModalImageComponent,
     ListRecentMessagesComponent,
-    LazyImageComponent
+    LazyImageComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
