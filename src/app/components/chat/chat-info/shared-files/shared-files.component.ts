@@ -11,12 +11,11 @@ import { animatedBubbleItems, animatedBubbleList } from '../../chat-body/chat-bo
 export class SharedFilesComponent implements OnInit {
 
   images: Array<[]> = [];
-  height = '93';
-  width = '93';
+  height = '93px';
+  width = '93px';
   margin = '0.6';
   borderRadius = '0.7';
   clipPath = 'polygon(0% 0%, 100% 0%, 100% 99%, 0% 100%)';
-  classImg = 'containerSharedFiles__filesContainer__files';
   viewAll = false;
 
   constructor(private chatService: ChatService) { }

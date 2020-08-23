@@ -1,11 +1,10 @@
 <ng-container *ngIf="loaded">
     <img [src]="image?.src" [ngStyle]="{
         'margin': margin + 'rem', 
-        'height': height + 'px', 
-        'width': width + 'px', 
+        'height': height, 
+        'width': width, 
         'border-radius': borderRadius + 'rem', 
-        'clip-path':clipPath,
-        'filter': 'invert(' + filter + ')'
+        'clip-path':clipPath
     }" alt="Images">
 </ng-container>
 
@@ -13,8 +12,8 @@
     <span class="skeleton-box" [ngStyle]="
     {
         'margin': margin + 'rem', 
-        'height': height + 'px', 
-        'width': width + 'px', 
+        'height': height, 
+        'width': width, 
         'border-radius': borderRadius + 'rem', 
         'clip-path':clipPath
     }"></span>

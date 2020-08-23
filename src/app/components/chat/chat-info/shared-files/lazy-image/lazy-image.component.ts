@@ -14,7 +14,6 @@ export class LazyImageComponent implements OnInit {
   @Input() margin: string;
   @Input() borderRadius: string;
   @Input() clipPath: string;
-  @Input() filter: number;
 
   loaded = false;
   image = new Image();

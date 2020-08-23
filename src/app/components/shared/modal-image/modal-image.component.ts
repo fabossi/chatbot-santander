@@ -15,13 +15,12 @@ export class ModalImageComponent implements OnInit {
   imageInView = { src: '', title: '' };
   invert = 0;
   srcImage = '../../../../assets/chevron-down.svg';
-  height = '93';
-  width = '93';
-  classImgGallery = 'overlay__imgGallery__loadMore__plus';
+  height = '93px';
+  width = '93px';
   borderRadius = '0.7';
   margin = '0.6';
-  heightPlus = '25';
-  widthPlus = '25';
+  heightPlus = '25px';
+  widthPlus = '25px';
   widthArray = 0;
 
 

@@ -2,6 +2,7 @@
   <div class="blur"></div>
   <div @viewAllState (@viewAllState.done)="onAnimationEnds()" class="overlay">
     <div *ngIf="images?.length > 0" class="overlay__imgGallery">
+      <div class="overlay__imgGallery__title"></div>
       <ng-container *ngFor="let img of images | slice:0:widthArray; index as i;">
         <div @viewAllItems class="overlay__imgGallery__containerTitle" (click)="currentImgInfo(i)">
           <app-lazy-image class="overlay__imgGallery__containerTitle__files" [src]="img?.src" [height]="height"
@@ -10,9 +11,9 @@
         </div>
       </ng-container>
       <div class='overlay__imgGallery__loadMore' (click)="loadMore()">
-        <div class="overlay__imgGallery__loadMore__plus">
-          Load More
-        </div>
+        <app-lazy-image class='overlay__imgGallery__loadMore__plus' [src]="srcImage" [height]="heightPlus"
+          [width]="widthPlus">
+        </app-lazy-image>
       </div>
     </div>
     <div class="overlay__imgView">
@@ -46,5 +47,4 @@
       <img class="overlay__closeModal__icon" src="../../../../assets/close.svg" alt="">
     </div>
   </div>
-
 </div>
