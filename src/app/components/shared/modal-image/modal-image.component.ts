@@ -22,6 +22,7 @@ export class ModalImageComponent implements OnInit {
   heightPlus = '25px';
   widthPlus = '25px';
   widthArray = 0;
+  filteredName = '';
 
 
   constructor(private chatService: ChatService) { }
