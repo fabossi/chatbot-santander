@@ -56,7 +56,7 @@ export class ChatBodyComponent implements OnInit, DoCheck, OnDestroy {
   scrollBottomAfter40px() {
     this.scrollDown.nativeElement.onscroll = (e) => {
       const scroll = e.target.scrollTop;
-      if (scroll <= 10) {
+      if (scroll < 400) {
         this.btnScrollToBottom = 'visible';
       }
       else {
