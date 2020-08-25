@@ -36,7 +36,7 @@ export class ChatInputComponent implements OnInit {
 
   onSubmitText() {
     const now = new Date()
-      .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })
       .toLowerCase();
     const userInfo: User = {
       text: this.inputForm.get('inputText').value,

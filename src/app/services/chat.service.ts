@@ -137,7 +137,7 @@ export class ChatService {
       .toPromise()
       .then((data: any) => {
         const now = new Date()
-          .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })
           .toLowerCase();
         this.watsonResult = data.result;
         this.loadingMessage.next('loaded');
