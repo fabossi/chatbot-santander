@@ -34,7 +34,7 @@ export class ChatBodyComponent implements OnInit, DoCheck, OnDestroy {
     const changes = this.iterableDiffer.diff(this.chatService.userInfo);
     if (changes) {
       setTimeout(() => {
-        this.scrollToBottom();
+        this.scrollToBottomOnNewMessage();
         this.scrollBottomAfter40px();
       }, 100);
     }
@@ -44,7 +44,7 @@ export class ChatBodyComponent implements OnInit, DoCheck, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  scrollToBottom(): void {
+  scrollToBottomOnNewMessage(): void {
     try {
       this.scrollDown.nativeElement.scrollTop = this.scrollDown.nativeElement.scrollHeight;
       this.btnScrollToBottom = 'none';
@@ -55,8 +55,7 @@ export class ChatBodyComponent implements OnInit, DoCheck, OnDestroy {
 
   scrollBottomAfter40px() {
     this.scrollDown.nativeElement.onscroll = (e) => {
-      const scroll = e.target.scrollTop;
-      if (scroll < 300) {
+      if (e.target.scrollTop <= 0) {
         this.btnScrollToBottom = 'visible';
       }
       else {
