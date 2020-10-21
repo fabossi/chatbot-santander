@@ -23,7 +23,7 @@ export class ModalImageComponent implements OnInit {
   widthPlus = '25px';
   widthArray = 0;
   filteredName = '';
-
+  viewLinks = false;
 
   constructor(private chatService: ChatService) { }
 
@@ -50,6 +50,14 @@ export class ModalImageComponent implements OnInit {
 
   loadMore() {
     this.widthArray = this.widthArray + 4;
+  }
+
+  viewLink() {
+    this.viewLinks = true;
+  }
+
+  viewImages() {
+    this.viewLinks = false;
   }
 
 }

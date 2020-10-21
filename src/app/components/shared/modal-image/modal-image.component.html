@@ -30,14 +30,14 @@
     </div>
     <div class="overlay__imgView">
       <div class="overlay__imgView__menu">
-        <div class="overlay__imgView__menu__media">
+        <div class="overlay__imgView__menu__media" (click)="viewImages()">
           Shared Media
         </div>
-        <div class="overlay__imgView__menu__link">
+        <div class="overlay__imgView__menu__link" (click)="viewLink()">
           Shared Links
         </div>
       </div>
-      <ng-container *ngIf="imageInView?.title !== ''">
+      <ng-container *ngIf="imageInView?.title !== '' && !viewLinks">
         <img @viewAllState [src]="imageInView?.src" class="overlay__imgView__viewer" />
         <div @viewAllState class="overlay__imgView__containerInfoImg">
           <div class="overlay__imgView__containerInfoImg__imgName">{{imageInView?.title}}</div>
@@ -50,9 +50,13 @@
         </div>
       </ng-container>
 
-      <div *ngIf="imageInView?.title === ''" class="no-image">
+      <div *ngIf="imageInView?.title === '' && !viewLinks" class="no-image">
         <p>Selecione uma imagem ao lado, para detalhes.</p>
       </div>
+
+      <ng-container *ngIf="viewLinks">
+        <app-shared-links></app-shared-links>
+      </ng-container>
 
     </div>
     <div (click)="closeModal()" class="overlay__closeModal">

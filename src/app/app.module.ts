@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListRecentMessagesComponent } from './components/chat/chat-body/list-recent-messages/list-recent-messages.component';
 import { LazyImageComponent } from './components/chat/chat-info/shared-files/lazy-image/lazy-image.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SharedLinksComponent } from './components/shared/modal-image/shared-links/shared-links.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     ModalImageComponent,
     ListRecentMessagesComponent,
     LazyImageComponent,
-    FilterPipe
+    FilterPipe,
+    SharedLinksComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

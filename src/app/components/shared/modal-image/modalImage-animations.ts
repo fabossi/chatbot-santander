@@ -7,15 +7,15 @@ export const viewAllImagesTrigger = trigger('viewAllState', [
     animate('.8s ease-in-out',
       style({ transform: 'scale(1)', opacity: 1 }))
   ]),
-  transition(':leave', [
-    style(
-      { transform: 'scale(1)', opacity: 1, height: '*' }
-    ),
-    animate('.8s ease-in-out',
-      style(
-        { transform: 'scale(0.5)', opacity: 0, height: '0px', margin: '0px' }
-      ))
-  ])
+  // transition(':leave', [
+  //   style(
+  //     { transform: 'scale(1)', opacity: 1, height: '*' }
+  //   ),
+  //   animate('.4s ease-in-out',
+  //     style(
+  //       { transform: 'translateX(-200px)', opacity: 0, height: '*' }
+  //     ))
+  // ])
 ]);
 
 export const viewAllImagesItems = trigger('viewAllItems', [

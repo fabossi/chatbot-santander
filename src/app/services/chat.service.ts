@@ -15,6 +15,7 @@ export class ChatService {
   switchTheme: Subject<boolean> = new Subject<boolean>();
   viewRecentMessage: Subject<boolean> = new Subject<boolean>();
   recentMessages = [];
+  linkMessages = [];
   recentMessagesEvent: BehaviorSubject<Array<[]>> = new BehaviorSubject<[]>([]);
   watsonResult: any;
 
